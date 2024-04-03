@@ -55,19 +55,19 @@
                         
                         <!-- friends list/chat list -->
                         <ul class="friend-list">
-                            <li class="card friend flex">                          
+                            <li v-for= "(element,i) in contacts" class="card friend flex">                          
                                 <div class="headshot">
-                                        <img src="./img/avatar_1.jpg" alt="">
+                                        <img :src="element.avatar" alt="">
                                 </div>
                                 <div class="card-body">
                                     <div class="name-time flex">
-                                        <div class="name">Michele</div>
+                                        <div class="name">{{element.name}}</div>
                                         <div class="time">16:15</div>
                                     </div>
                                     <p class="card-subheading">Lorem ipsum dolor sit.</p>
                                 </div>
                             </li>
-                            <li class="card friend flex">                          
+                            <!-- <li class="card friend flex">                          
                                 <div class="headshot">
                                         <img src="./img/avatar_2.jpg" alt="">
                                 </div>
@@ -150,7 +150,7 @@
                                     </div>
                                     <p class="card-subheading">Lorem ipsum dolor sit.</p>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
