@@ -179,7 +179,7 @@ input {
     background-color: #eaeaea;
 }
 
-.not_filtered {
+.d-none {
     display: none;
 }
 
@@ -249,6 +249,27 @@ input {
 .message-arrow {
     top: 5px;
     right: 15px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(77,146,136,1);
+    z-index: 1;
+    top: 110%;
+    color: white
+}
+
+.dropdown a {
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.dropdown a:hover {
+    border: 1px solid white;
+    cursor: pointer;
 }
 
 .message-time {

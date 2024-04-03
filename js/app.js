@@ -6,6 +6,8 @@ createApp({
         searchContactValue:'',
         userTextValue: '',
         currentIndex: 0,
+        currentIndexMessage: null,
+        visible: false,
         contacts: [
             {
                 name: 'Michele',
@@ -194,5 +196,21 @@ createApp({
             })  
         },1000)
     },
+
+    openMessageMenu(i) {
+        if (this.currentIndexMessage !== i){
+            this.currentIndexMessage = i
+        } else {
+            this.currentIndexMessage = null
+        }
+    },
+
+    resetIndexMessage() {
+        this.currentIndexMessage = null
+    },
+
+    deleteMessage() {
+        this.contacts[this.currentIndex].messages.splice(this.currentIndexMessage,1)
+    }
   }
 }).mount('#app')

@@ -57,10 +57,10 @@
                         <ul class="friend-list">
                             <li 
                             v-for= "(element,i) in contacts" 
-                            @click="currentIndex = i"
+                            @click="currentIndex = i, resetIndexMessage()"
                             class="card friend flex"
                             :class="currentIndex === i ? 'active' : '',
-                            element.name.toLowerCase().indexOf(searchContactValue) === -1 ? 'not_filtered' : ''"
+                            element.name.toLowerCase().indexOf(searchContactValue) === -1 ? 'd-none' : ''"
                             >                          
                                 <div class="headshot">
                                         <img :src="element.avatar" alt="">
@@ -187,9 +187,19 @@
                     <!-- chat window -->
                     <div class="chat-window">
                         <ul class="messages flex">
-                            <li v-for="(el,i) in contacts[currentIndex].messages" class="message" :class="el.status === 'sent' ? 'sent' : 'received'">
+                            <li 
+                            v-for="(el,i) in contacts[currentIndex].messages" 
+                            class="message" 
+                            :class="el.status === 'sent' ? 'sent' : 'received'"
+                            >
                                 <p>{{el.message}}</p>
-                                <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="message-arrow" @click="openMessageMenu(i)">
+                                    <i class="fa-solid fa-chevron-down" ></i>
+                                </div>
+                                <div class="dropdown" v-if="currentIndexMessage === i">
+                                    <a>Message Info</a>
+                                    <a @click.stop="deleteMessage">Delete</a>
+                                </div>
                                 <div class="message-time">15:15</div>
                             </li>
                             <!-- <li class="message received">
