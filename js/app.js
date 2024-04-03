@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+        userTextValue: '',
         currentIndex: 0,
         contacts: [
             {
@@ -169,4 +170,28 @@ createApp({
             ]
     }
   },
+
+  methods : {
+    addMessage (i) {
+        const newMessage = 
+        {
+            date: '10/01/2020 15:51:00',
+            message: this.userTextValue,
+            status: 'sent'
+        }
+
+        this.contacts[i].messages.push(newMessage)
+
+        this.userTextValue = ''
+
+        setTimeout(() => {
+            //uso arrow function per risolvere il "this" problem
+            this.contacts[i].messages.push({
+                date: '10/01/2020 15:51:00',
+                message: 'ok',
+                status: 'received'
+            })  
+        },1000)
+    },
+  }
 }).mount('#app')

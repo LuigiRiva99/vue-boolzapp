@@ -216,7 +216,7 @@
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="input-message">
-                                <input type="text" name="text" placeholder="Scrivi un messaggio">
+                                <input v-model="userTextValue" @keyup.enter="addMessage(currentIndex)" type="text" name="text" placeholder="Scrivi un messaggio">
                             </div>
                             <div class="input-audio">
                                 <i class="fa-solid fa-microphone"></i>
