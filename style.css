@@ -179,6 +179,10 @@ input {
     background-color: #eaeaea;
 }
 
+.not_filtered {
+    display: none;
+}
+
 .time,
 .card-subheading {
     color: lightgray;

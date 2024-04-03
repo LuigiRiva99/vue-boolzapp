@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+        searchContactValue:'',
         userTextValue: '',
         currentIndex: 0,
         contacts: [

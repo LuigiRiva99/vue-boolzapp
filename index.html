@@ -49,7 +49,7 @@
 
                         <!-- search bar -->
                         <div class="search-bar">
-                            <input type="text" name="search" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model="searchContactValue" type="text" name="search" placeholder="Cerca o inizia una nuova chat">
                             <i class="fa-solid fa-magnifying-glass"></i> 
                         </div>
                         
@@ -59,7 +59,9 @@
                             v-for= "(element,i) in contacts" 
                             @click="currentIndex = i"
                             class="card friend flex"
-                            :class="currentIndex === i ? 'active' : ''">                          
+                            :class="currentIndex === i ? 'active' : '',
+                            element.name.toLowerCase().indexOf(searchContactValue) === -1 ? 'not_filtered' : ''"
+                            >                          
                                 <div class="headshot">
                                         <img :src="element.avatar" alt="">
                                 </div>
