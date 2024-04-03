@@ -55,7 +55,11 @@
                         
                         <!-- friends list/chat list -->
                         <ul class="friend-list">
-                            <li v-for= "(element,i) in contacts" class="card friend flex">                          
+                            <li 
+                            v-for= "(element,i) in contacts" 
+                            @click="currentIndex = i"
+                            class="card friend flex"
+                            :class="currentIndex === i ? 'active' : ''">                          
                                 <div class="headshot">
                                         <img :src="element.avatar" alt="">
                                 </div>
@@ -162,11 +166,11 @@
                     <div class="card profile">
                         <div class="user flex">
                             <div class="headshot">
-                                <img src="./img/avatar_1.jpg" alt="">
+                                <img :src="contacts[currentIndex].avatar" alt="">
                             </div>
                             <div>
                                 <div class="chat-name flex">
-                                    <div class="name">Michele</div>
+                                    <div class="name">{{contacts[currentIndex].name}}</div>
                                 </div>
                                 <p class="card-subheading">Ultimo accesso oggi alle 16:26</p>
                             </div>
@@ -181,12 +185,12 @@
                     <!-- chat window -->
                     <div class="chat-window">
                         <ul class="messages flex">
-                            <li class="message sent">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae nostrum odit iusto, architecto eaque inventore doloribus nobis corporis quam reiciendis quisquam repellat quo alias deleniti repellendus, accusantium aut commodi?</p>
+                            <li v-for="(el,i) in contacts[currentIndex].messages" class="message" :class="el.status === 'sent' ? 'sent' : 'received'">
+                                <p>{{el.message}}</p>
                                 <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
                                 <div class="message-time">15:15</div>
                             </li>
-                            <li class="message received">
+                            <!-- <li class="message received">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae nostrum odit iusto, architecto eaque inventore doloribus nobis corporis quam reiciendis quisquam repellat quo alias deleniti repellendus, accusantium aut commodi?</p>
                                 <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
                                 <div class="message-time">15:15</div>
@@ -200,7 +204,7 @@
                                 <p>Lorem</p>
                                 <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
                                 <div class="message-time">15:15</div>
-                            </li>
+                            </li> -->
                         </ul>
                         
                     </div>
