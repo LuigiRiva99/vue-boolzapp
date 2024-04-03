@@ -1,0 +1,355 @@
+/* RESET */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+menu,
+ul,
+ol {
+	list-style: none;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+}
+
+input {
+	border: none;
+	background: transparent;
+}
+
+/* LAYOUT */
+
+.app {
+    height: 100vh;
+    width: 100%;
+    background: rgb(220,219,211);
+    background: linear-gradient(0deg, rgba(220,219,211,1) 89%, rgba(77,146,136,1) 89%);
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+}
+
+.flex {
+    display: flex;
+}
+
+.sidebar {
+    display: none;
+}
+
+.chat {
+    width: 100%;
+}
+
+.card {
+    padding: 10px;
+}
+
+.card-body:not(.user .card-body){
+    padding: 5px 10px;
+    flex-grow: 1;
+}
+
+.chat {
+    flex-direction: column;
+    overflow: hidden;
+}
+/* SIDEBAR */
+
+.profile {
+    background-color: #EAEAEA;
+}
+
+.sidebar .row {
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.user,
+.friend {
+    width: 100%;
+}
+
+.user {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notify {
+    background-color: #8EDAFC;
+}
+
+.bell {
+    width: 50px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.bell i {
+    color: #8EDAFC;
+}
+
+/* SEARCH-BAR */
+.search {
+    background-color: lightgray;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 30px;
+    padding-left: 50px;
+	padding-right: 10px;
+    background-color: white;
+    outline: none;
+}
+.search-bar {
+    position: relative;
+    margin: 10px 0px;
+}
+
+.search-bar i {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	color: #b1b1b1;
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: 20px;
+}
+
+
+.user img,
+.friend img {
+    aspect-ratio: 1/1;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.friend .name-time {
+    justify-content: space-between;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.friend-list {
+    flex-grow: 1;
+    overflow: auto;
+    background-color: white;
+}
+
+.friend {
+    border-top: 1px solid lightgray;
+}
+
+.time,
+.card-subheading {
+    color: lightgray;
+}
+
+/* main chat section */
+
+.chat-tools {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    color: #a5a5a5;
+    font-size: 20px;
+}
+
+.chat .user {
+    justify-content: flex-start;
+}
+
+.chat .headshot {
+    padding-right: 10px;
+}
+
+/* CHAT-WINDOW */
+
+.chat-window {
+    flex-grow: 1;
+    background-image: url(./img/mine.jpg);
+    overflow: auto;
+    padding: 10px 30px;
+}
+
+.chat-window li {
+    max-width: 480px;
+}
+
+.messages {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-window .message {
+    padding: 15px;
+    padding-right: 50px;
+    border-radius: 10px;
+    position: relative;
+} 
+
+.sent {
+    background-color: #DEF8C0;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.message-arrow, .message-time {
+    position: absolute;
+    color: lightgray;
+}
+
+.message-arrow {
+    top: 5px;
+    right: 15px;
+}
+
+.message-time {
+    bottom: 5px;
+    right: 5px;
+    font-size: 13px;
+}
+/* input-bar */
+
+.input-bar.card {
+    background-color: #EAEAEA;
+}
+
+.input-content {
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.input-message {
+    flex-grow: 1;
+    color: #a5a5a5;
+    background-color: white;
+}
+
+.input-message input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-bar i {
+    font-size: 20px;
+    color: #a5a5a5;
+    padding: 0px 20px;
+}
+
+.emoji, .input-audio {
+    flex-shrink: 0;
+}
+/* DEBUG */
+
+.debug .app {
+    border: 1px solid black;
+    background-color: #DBDBD3;
+}
+
+.debug .hero {
+    border: 1px solid blue;
+    background-color: white;
+} 
+
+.debug .sidebar {
+    border: 1px solid red;
+    /* background-color: rgb(214, 103, 103); */
+}
+
+.debug .chat {
+    border: 1px solid purple;
+    background-color: rgb(148, 101, 148);
+}
+
+.debug .sidebar .row > * {
+    border: 1px dashed black;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: flex;
+        flex-shrink: 0;
+        width: 80px;
+    }
+
+    .chat {
+        flex-grow: 1;
+    }
+
+    .sidebar .card-body, 
+    .sidebar .notify,
+    .sidebar .search-bar  {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .app{
+        padding: 30px 0px;
+    }
+
+    .hero {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        width: 380px;
+    }
+
+    .sidebar .card-body, 
+    .sidebar .notify,
+    .sidebar .search-bar  {
+        display: block;
+    }
+
+    .sidebar .user ul {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .sidebar .user li {
+        font-size: 20px;
+        color: #a5a5a5;
+    }
+
+}

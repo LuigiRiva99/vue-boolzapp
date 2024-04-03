@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f5e507a464.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="app">
+            <div class="hero flex">
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <div class="row flex">
+
+                        <!-- user profile -->
+                        <div class="card profile">
+                            <div class="user flex">
+                                <div class="headshot">
+                                    <img src="./img/avatar_io.jpg" alt="">
+                                </div>
+                                <ul class="card-body">
+                                    <li><i class="fa-solid fa-circle-notch"></i></li>
+                                    <li><i class="fa-solid fa-message"></i></li>
+                                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- notification banner -->
+                        <div class="card notify">    
+                            <div class="flex">
+                                <div class="bell">
+                                    <i class="fa-solid fa-bell-slash"></i>
+                                </div>
+                                <div class="card-body">
+                                    <div class="name flex">
+                                        <div><strong>Ricevi notifiche di nuovi messaggi</strong></div>
+                                    </div>
+                                    <p><u>attiva notifiche desktop</u></p>
+                                </div>
+                            </div>       
+                        </div>
+
+                        <!-- search bar -->
+                        <div class="search-bar">
+                            <input type="text" name="search" placeholder="Cerca o inizia una nuova chat">
+                            <i class="fa-solid fa-magnifying-glass"></i> 
+                        </div>
+                        
+                        <!-- friends list/chat list -->
+                        <ul class="friend-list">
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Michele</div>
+                                        <div class="time">16:15</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_2.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Fabio</div>
+                                        <div class="time">16:05</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_3.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Samuele</div>
+                                        <div class="time">16:03</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_4.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Alessandro B.</div>
+                                        <div class="time">15:50</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_5.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Alessandro L.</div>
+                                        <div class="time">15:45</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_6.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Claudia</div>
+                                        <div class="time">15:40</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_7.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Federico</div>
+                                        <div class="time">15:22</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                            <li class="card friend flex">                          
+                                <div class="headshot">
+                                        <img src="./img/avatar_8.jpg" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="name-time flex">
+                                        <div class="name">Davide</div>
+                                        <div class="time">15:15</div>
+                                    </div>
+                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- main chat section -->
+                <div class="chat flex">
+                    
+                    <!-- current chat friend -->
+                    <div class="card profile">
+                        <div class="user flex">
+                            <div class="headshot">
+                                <img src="./img/avatar_1.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="chat-name flex">
+                                    <div class="name">Michele</div>
+                                </div>
+                                <p class="card-subheading">Ultimo accesso oggi alle 16:26</p>
+                            </div>
+                            <ul class="chat-tools">
+                                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                                <li><i class="fa-solid fa-paperclip"></i></li>
+                                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- chat window -->
+                    <div class="chat-window">
+                        <ul class="messages flex">
+                            <li class="message sent">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae nostrum odit iusto, architecto eaque inventore doloribus nobis corporis quam reiciendis quisquam repellat quo alias deleniti repellendus, accusantium aut commodi?</p>
+                                <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="message-time">15:15</div>
+                            </li>
+                            <li class="message received">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae nostrum odit iusto, architecto eaque inventore doloribus nobis corporis quam reiciendis quisquam repellat quo alias deleniti repellendus, accusantium aut commodi?</p>
+                                <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="message-time">15:15</div>
+                            </li>
+                            <li class="message sent">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae nostrum odit iusto, architecto eaque inventore doloribus nobis corporis quam reiciendis quisquam repellat quo alias deleniti repellendus, accusantium aut commodi?</p>
+                                <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="message-time">15:15</div>
+                            </li>
+                            <li class="message received">
+                                <p>Lorem</p>
+                                <div class="message-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                                <div class="message-time">15:15</div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+
+                    <!-- input bar -->
+                    <div class="input-bar card">
+                        <div class="input-content flex">
+                            <div class="emoji">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <div class="input-message">
+                                <input type="text" name="text" placeholder="Scrivi un messaggio">
+                            </div>
+                            <div class="input-audio">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
