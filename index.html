@@ -68,9 +68,9 @@
                                 <div class="card-body">
                                     <div class="name-time flex">
                                         <div class="name">{{element.name}}</div>
-                                        <div class="time">16:15</div>
+                                        <div class="time">{{element.messages[element.messages.length - 1].date.slice(11,16)}}</div>
                                     </div>
-                                    <p class="card-subheading">Lorem ipsum dolor sit.</p>
+                                    <p class="card-subheading">{{element.messages[element.messages.length - 1].message}}</p>
                                 </div>
                             </li>
                             <!-- <li class="card friend flex">                          
@@ -160,7 +160,7 @@
                         </ul>
                     </div>
                 </div>
-
+ 
                 <!-- main chat section -->
                 <div class="chat flex">
                     
@@ -192,7 +192,7 @@
                             class="message" 
                             :class="el.status === 'sent' ? 'sent' : 'received'"
                             >
-                                <p>{{el.message}}</p>
+                                <p class="msg_of">{{el.message}}</p>
                                 <div class="message-arrow" @click="openMessageMenu(i)">
                                     <i class="fa-solid fa-chevron-down" ></i>
                                 </div>
@@ -200,7 +200,7 @@
                                     <a>Message Info</a>
                                     <a @click.stop="deleteMessage">Delete</a>
                                 </div>
-                                <div class="message-time">15:15</div>
+                                <div class="message-time">{{el.date.slice(11,16)}}</div>
                             </li>
                             <!-- <li class="message received">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vitae nostrum odit iusto, architecto eaque inventore doloribus nobis corporis quam reiciendis quisquam repellat quo alias deleniti repellendus, accusantium aut commodi?</p>

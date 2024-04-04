@@ -212,5 +212,5 @@ createApp({
     deleteMessage() {
         this.contacts[this.currentIndex].messages.splice(this.currentIndexMessage,1)
     }
-  }
+  },
 }).mount('#app')

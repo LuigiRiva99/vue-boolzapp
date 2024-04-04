@@ -224,6 +224,10 @@ input {
     gap: 15px;
 }
 
+.msg_of {
+    overflow-wrap: anywhere;
+}
+
 .chat-window .message {
     padding: 15px;
     padding-right: 50px;
