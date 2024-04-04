@@ -75,6 +75,10 @@ input {
     flex-direction: column;
     overflow: hidden;
 }
+
+.headshot {
+    flex-shrink: 0;
+}
 /* SIDEBAR */
 
 .profile {
@@ -90,6 +94,10 @@ input {
 .user,
 .friend {
     width: 100%;
+}
+
+.friend-list .friend {
+    max-height: 75px;
 }
 
 .user {
@@ -186,8 +194,15 @@ input {
 .time,
 .card-subheading {
     color: lightgray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
+.card-body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 /* main chat section */
 
 .chat-tools {
